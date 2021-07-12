@@ -32,6 +32,7 @@ public class AtmMain {
 
             doCheckPassword(cardid,cardPwd);
             i++;
+
         }
     }
     // 判断角色 和 判断密码
@@ -47,6 +48,7 @@ public class AtmMain {
         System.out.println("请输入卡号");
         Scanner scanner = new Scanner(System.in);
         cardid = scanner.nextLine();
+
         System.out.println("cardid = " + cardid);
         System.out.println("请输入密码");
         cardPwd = scanner.nextLine();
