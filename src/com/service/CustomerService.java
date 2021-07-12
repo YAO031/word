@@ -46,11 +46,33 @@ public class CustomerService {
                 break;
             case "2":
                 System.out.println("取款");
+//                goGetMOney();
+
                 dodelMoney();
                 goOneHome();
                 break;
             case "3":
                 System.out.println("转账");
+
+                System.out.println("请输入对方的账号");
+                Scanner scanner=new Scanner(System.in);
+                String otherAccount=scanner.nextLine();
+                System.out.println("请输入你需要的转账的金额");
+                String oterMoney=scanner.nextLine();
+                Double otermoneyint=Double.parseDouble(oterMoney);
+
+                Double currentmoney=currentCustomer.getMoney()-otermoneyint;
+                    Customer oter=null;
+                for (Customer customer : customerList) {
+                    if (customer.getAccount().equals(otherAccount) ) {
+                        oter=customer;
+                    }
+                }
+
+                double oterOnemoney=oter.getMoney()+otermoneyint;
+                currentCustomer.setMoney(currentmoney);//2注意，不能够创建
+                double oterOneMoney=oter.getMoney();//别人余额
+
                 goOneHome();
                 break;
             case "4":
@@ -61,11 +83,27 @@ public class CustomerService {
             case "5":
 
                 System.out.println("退卡");
-                
+                TextUitl.welcome1();
                break;
 
         }
     }
+
+    private void goGetMOney() {
+        TextUitl.getMoneyUI();
+        //让顾客输入金额
+        Scanner scanner=new Scanner(System.in);
+        String numIn=scanner.nextLine();
+        if (numIn.equals("1")) {
+            double money = currentCustomer.getMoney();
+            money=money-100;
+            currentCustomer.setMoney(money);
+            System.out.println("你的余额是："+money);
+            //取完
+
+        }
+    }
+
     // 查询余额
     private void doSelectMoney() {
         double money = currentCustomer.getMoney();
