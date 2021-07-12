@@ -1,4 +1,4 @@
-package com.xiexin.bean;
+package src.com.bean;
 
 import java.util.ArrayList;
 import java.util.List;

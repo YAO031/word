@@ -1,4 +1,4 @@
-package com.xiexin.bean;
+package src.com.bean;
 
 public class Customer {
     private String account,password,cname,phoneNum;

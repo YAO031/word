@@ -1,8 +1,8 @@
-package com.xiexin.controller;
+package src.com.controller;
 // 自动导包
 
-import com.xiexin.service.CustomerService;
-import com.xiexin.util.TextUitl;
+import src.com.service.CustomerService;
+import src.com.util.TextUitl;
 
 import java.util.Scanner;
 

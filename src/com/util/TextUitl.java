@@ -1,4 +1,4 @@
-package com.xiexin.util;
+package src.com.util;
 
 /**
  * 文本信息的工具类.

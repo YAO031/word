@@ -1,8 +1,8 @@
-package com.xiexin.service;
+package src.com.service;
 
-import com.xiexin.bean.Customer;
-import com.xiexin.bean.CustomerData;
-import com.xiexin.util.TextUitl;
+import src.com.bean.Customer;
+import src.com.bean.CustomerData;
+import src.com.util.TextUitl;
 
 import java.util.List;
 import java.util.Scanner;

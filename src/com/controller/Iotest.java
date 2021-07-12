@@ -1,4 +1,4 @@
-package com.xiexin.controller;
+package src.com.controller;
 
 import java.io.File;
 

@@ -1,4 +1,4 @@
-package com.xiexin.bean;
+package src.com.bean;
 
 /**
  * 标准的单例模式  步骤 : 如下 1, 2, 3

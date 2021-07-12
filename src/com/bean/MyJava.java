@@ -1,4 +1,4 @@
-package com.xiexin.bean;
+package src.com.bean;
 
 import java.util.ArrayList;
 
@@ -36,7 +36,7 @@ public class MyJava {
                 c1.setPrice(5555.0D);
                 c1.setColor("黑色");
                 c1.setTypeName("机械革命code555");
-        System.out.println("c1 = " + c1);  //c1 = com.xiexin.bean.Computer@74a14482 内存
+        System.out.println("c1 = " + c1);  //c1 = Computer@74a14482 内存
         // 内存地址是否一样 , 是判断对象是否相等的依据
         Computer c2 = new Computer();
         c2.setPrice(5555.0D);

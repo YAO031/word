@@ -1,4 +1,4 @@
-package com.xiexin.bean;
+package src.com.bean;
 
 public class Manager {
     private String account,password,mname;
