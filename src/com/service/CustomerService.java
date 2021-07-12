@@ -52,26 +52,7 @@ public class CustomerService {
                 goOneHome();
                 break;
             case "3":
-                System.out.println("转账");
-
-                System.out.println("请输入对方的账号");
-                Scanner scanner=new Scanner(System.in);
-                String otherAccount=scanner.nextLine();
-                System.out.println("请输入你需要的转账的金额");
-                String oterMoney=scanner.nextLine();
-                Double otermoneyint=Double.parseDouble(oterMoney);
-
-                Double currentmoney=currentCustomer.getMoney()-otermoneyint;
-                    Customer oter=null;
-                for (Customer customer : customerList) {
-                    if (customer.getAccount().equals(otherAccount) ) {
-                        oter=customer;
-                    }
-                }
-
-                double oterOnemoney=oter.getMoney()+otermoneyint;
-                currentCustomer.setMoney(currentmoney);//2注意，不能够创建
-                double oterOneMoney=oter.getMoney();//别人余额
+                deleAccount();
 
                 goOneHome();
                 break;
@@ -87,6 +68,29 @@ public class CustomerService {
                break;
 
         }
+    }
+
+    private void deleAccount() {
+        System.out.println("转账");
+
+        System.out.println("请输入对方的账号");
+        Scanner scanner=new Scanner(System.in);
+        String otherAccount=scanner.nextLine();
+        System.out.println("请输入你需要的转账的金额");
+        String oterMoney=scanner.nextLine();
+        Double otermoneyint=Double.parseDouble(oterMoney);
+
+        Double currentmoney=currentCustomer.getMoney()-otermoneyint;
+        Customer oter=null;
+        for (Customer customer : customerList) {
+            if (customer.getAccount().equals(otherAccount) ) {
+                oter=customer;
+            }
+        }
+
+        double oterOnemoney=oter.getMoney()+otermoneyint;
+        currentCustomer.setMoney(currentmoney);//2注意，不能够创建
+        double oterOneMoney=oter.getMoney();//别人余额
     }
 
     private void goGetMOney() {
@@ -130,12 +134,69 @@ public class CustomerService {
     public void addMony(){
         double money=currentCustomer.getMoney();
         System.out.println("请输入你要去的面额");
+        TextUitl.setMoneyUI();
         Scanner scanner=new Scanner(System.in);
         String  a= scanner.nextLine();
         int a1=Integer.parseInt(a);
-        double money1=money+a1;
-        System.out.println(money1);
-        currentCustomer.setMoney(money1);
+        if (a1 == 1) {
+            double money1=money+100;
+            System.out.println(money1);
+            currentCustomer.setMoney(money1);
+        }
+        if (a1 == 2) {
+            double money1=money+200;
+            System.out.println(money1);
+            currentCustomer.setMoney(money1);
+
+        }
+        if (a1 == 3) {
+            double money1=money+300;
+            System.out.println(money1);
+            currentCustomer.setMoney(money1);
+
+        }
+        if (a1 == 4) {
+            double money1=money+500;
+            System.out.println(money1);
+            currentCustomer.setMoney(money1);
+
+        }
+        if (a1 == 5) {
+            double money1=money+800;
+            System.out.println(money1);
+            currentCustomer.setMoney(money1);
+
+        }
+        if (a1 == 6) {
+            double money1=money+1000;
+            System.out.println(money1);
+            currentCustomer.setMoney(money1);
+
+        }
+        if (a1 == 7) {
+            double money1=money+2000;
+            System.out.println(money1);
+            currentCustomer.setMoney(money1);
+
+        }
+        if (a1 == 8) {
+            scanner=new Scanner(System.in);
+            String  aa= scanner.nextLine();
+            int aa1=Integer.parseInt(aa);
+            if (aa1%100==0) {
+                double money1=money+aa1;
+                System.out.println(money1);
+                currentCustomer.setMoney(money1);
+
+            }else {
+                System.out.println("格式不对");
+
+            }
+
+        }
+
+
+
 
     }
 
