@@ -18,14 +18,14 @@ public class StringBuildertest1 {
         //添加
         sss.append("CD你经常");
         System.out.println(sss);
-        sss.replace(10,19,"cdbhbcu");
+        sss.replace(2,4,"cdbhbcu");//start起始 end 终止
         //删除
         sss.deleteCharAt(2);
 
         System.out.println(sss);
 
 
-        sss.delete(2,5);
+        sss.delete(2,5);//sb.delete( 0, sb.length() );删除全部
         System.out.println(sss);
         //添加
 

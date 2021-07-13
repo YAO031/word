@@ -13,13 +13,13 @@ public class Stringtest1 {
     public static void main(String[] args) {
         String str="a";
         System.out.println(System.currentTimeMillis());
-        long l=System.currentTimeMillis();
+        long al=System.currentTimeMillis();
 
-        for (int i = 0; i < 1000000000; i++) {
+        for (int i = 0; i <25; i++) {
             str+=str;//测试频繁修改字符串
-
+            System.out.println(str);
         }
-        System.out.println(System.currentTimeMillis()-l);
+        System.out.println(System.currentTimeMillis()-al);
         //Exception in thread "main" java.lang.OutOfMemoryError: Java heap space内存不足内存溢出
     }
 }
