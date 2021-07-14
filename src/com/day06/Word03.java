@@ -8,7 +8,7 @@ public class Word03 {
          huiwen(str);
     }
 
-    public static boolean huiwen(String str) {
+    public static void huiwen(String str) {
 
         StringBuilder sd = new StringBuilder(str);
         StringBuilder aa = sd.reverse();
@@ -17,13 +17,7 @@ public class Word03 {
         StringBuilder a1 = sd.reverse();
         System.out.println(a1);
 
-
         System.out.println(a1.equals(sd));
-        if (a1.equals(aa) ) {
-            return true;
-        }else{
-            return  false;
-        }
 
 
     }
