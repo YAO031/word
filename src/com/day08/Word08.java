@@ -2,10 +2,7 @@ package src.com.day08;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * 通过控制台输入3个日期(yyyy-MM-dd格式)，然后转换为Date对象后存入
@@ -22,6 +19,14 @@ public class Word08 {
         for (int i = 0; i < 3; i++) {
             datass(ss);
         }
+
+        //对时间进行排序
+        Collections.sort(ss, new Comparator<Date>() {
+            @Override
+            public int compare(Date o1, Date o2) {
+                return o1.compareTo(o2);
+            }
+        });
         System.out.println(ss);
 
     }
