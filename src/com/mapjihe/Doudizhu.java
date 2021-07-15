@@ -105,6 +105,14 @@ public class Doudizhu {
         System.out.println("dipai = " + dipai);
 
 
+        for (String s : dipai) {
+
+            if (s.equals("A3")) {
+                System.out.println("底牌有红桃三,重新再开一局");
+
+            }
+
+        }
 
 
 

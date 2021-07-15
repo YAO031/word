@@ -18,7 +18,8 @@ import java.util.Collection;
 public class CollectionDemo01  {
 
     public static void main(String[] args) {
-        Collection c1=new ArrayList();
+//        ArrayList  c1=new ArrayList();
+        Collection  c1=new ArrayList();
         //add增加
         ((ArrayList) c1).add("唐僧--执著的目标 ");
 
@@ -37,21 +38,30 @@ public class CollectionDemo01  {
         System.out.println(empty);
 
         //集合的清口
-        c1.clear();
+//        c1.clear();
         System.out.println(c1);
         boolean empty1=c1.isEmpty();
         System.out.println(empty1);
 
-    
+
 
         //集合的便利
 
         //one
-        for (int i = 0; i < c1.size(); i++) {
+//        for (int i = 0; i < c1.size(); i++) {
+//
+//            System.out.println(c1.get(i));
+//
+//        }
+        //迭代器
+        for (Object o : c1) {
 
-            System.out.println(c1);
+            System.out.println(o);
 
         }
+        //迭代器和for循环区别；
+        //迭代器工作：有游标，问下一个，有没有下一个元素，如果有就拿到，没有就结束
+        //for循环工作：把集合从0--N排序，从0开始，那下标。
 
     }
 
