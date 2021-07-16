@@ -44,7 +44,7 @@ public class DataWord01 {
 
         //修改 日期格式
 
-       String  pattern="yyyy-mm-dd HH:mm:ss";
+       String  pattern="yyyy-MM-dd HH:mm:ss";
         String  pattern1="yyyy/mm/dd HH:mm:ss";
 
         SimpleDateFormat sdf=new SimpleDateFormat(pattern);

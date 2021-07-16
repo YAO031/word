@@ -1,6 +1,6 @@
 package src.com.mapjihe;
-
-public class Test {
+//泛型必须得加
+public class Test implements  Comparable<Test>{
 
     private String name;
 
@@ -40,4 +40,10 @@ public class Test {
     private int heiht;
     private int age;
 
+    @Override
+    public int compareTo(Test o) {
+
+        int x=o.getAge()-this.getAge();
+        return x;
+    }
 }
