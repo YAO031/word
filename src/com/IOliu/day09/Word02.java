@@ -17,60 +17,7 @@ public class Word02 {
 
     public static void main(String[] args) throws IOException {
 
-//        System.out.println("请输入你要创建的文档");
-//        Scanner sc=new Scanner(System.in);
-//        String ss=sc.nextLine();
 //
-//
-//        File file = new File(ss);//路径
-//
-//        String ss1=ss;
-//
-//       String dd= ss1.replace(".txt","_副本1.txt");
-//
-//        int s=dd.indexOf("副本")+1;
-//
-//        char  c = ss.charAt(s);
-//        int v=Integer.parseInt( String.valueOf(c)) ;
-//
-//        //查看文件是否存在
-//        boolean exists = file.exists();
-//        while (exists){
-//            if (ss == dd) {
-//
-//
-//            }
-//
-//        }
-//
-//        int i=1;
-//    while (exists){
-//
-//        if (ss==dd) {
-//
-//
-//
-//        }
-//
-//        i++;
-//
-//
-//    }
-//
-//        if ( exists) {
-//
-//            System.out.println("文件已存在");
-//            System.out.println("已创建"+dd+"的副本文件");
-//             File as=new File(dd);
-//
-//            as.createNewFile();
-//
-//        }else{
-//            System.out.println("文件不存在");
-//            boolean create = file.createNewFile();
-//
-//            System.out.println("文件穿件成功");
-//        }
 
         Scanner scan = new Scanner(System.in);
         System.out.println("请输入文件名:");

@@ -45,6 +45,15 @@ public class IODemo01 {
 
 
 
+        //文件的删除
+        if (exists ) {
+
+            System.out.println("文件存在，删除他");
+            file.delete();
+
+        }
+
+
 
     }
 
